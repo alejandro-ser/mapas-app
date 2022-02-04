@@ -9,6 +9,7 @@ import { Feature, PlacesResponse } from '../interfaces/places';
 export class PlacesService {
 
   public useLocation?: [number, number];
+
   public isLoadingPlaces: boolean = false;
   public places: Feature[] = [];
 
@@ -39,7 +40,12 @@ export class PlacesService {
   }
 
   getPlacesByQuery( query: string = '') {
-    // todo: evaluar cuando el query es nulo
+
+    if ( query.length === 0) {
+      this.isLoadingPlaces = false;
+      this.places = [];
+      return;
+    }
 
     if ( !this.useLocation ) throw Error('No hay userLocation');
 
@@ -51,8 +57,6 @@ export class PlacesService {
       }
     })
         .subscribe( resp => {
-          console.log(resp.features);
-
           this.isLoadingPlaces = false;
           this.places = resp.features;
         } );
