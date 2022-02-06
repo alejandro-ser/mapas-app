@@ -1,5 +1,15 @@
 # MapasApp
 
+## Ver la aplicación desplegada aquí
+
+[https://mapbox-angular.netlify.app](https://mapbox-angular.netlify.app)
+
+## Aplicación web desarrollada basandose en el videotutorial del canal de *Fernando Herrera* ([Ver aquí](https://www.youtube.com/playlist?list=PLCKuOXG0bPi0RHirEQB7GJgpfW-Q5m-Xu))
+
+Usando la API de [Mapbox](https://docs.mapbox.com)
+
+# MapasApp
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.2.0.
 
 ## Development server
